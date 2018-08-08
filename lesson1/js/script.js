@@ -4,7 +4,7 @@ var shopName =  prompt("Введите имя для вашего магазин
 
 var shopGoods = new Array (3);
 for (var j = 0, J = shopGoods.length; j < J; j++)
-shopGoods [j] = prompt ('введите название товара для продажи', '');
+shopGoods [j] = prompt ('Какой тип товара будет продавать', '');
  
 console.log (shopGoods);
 
