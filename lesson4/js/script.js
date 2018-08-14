@@ -21,7 +21,7 @@ var mainList = {
 	employers: {},
 	open: false,
 	discount: false,
-	shopItems: [""],
+	shopItems: [],
 	chooseGoods: function chooseGoods() {
 
 		for (var i = 0; i < 5; i++) {
@@ -92,7 +92,6 @@ var mainList = {
 		if ((typeof (items)) === 'string' && (typeof (items)) != null && items != ''){
 		mainList.shopItems = items.split(",");
 		mainList.shopItems.push(prompt("Подождите, еще ", ""));
-		mainList.shopItems.unshift("");
 		mainList.shopItems.sort();
 		}
 		
@@ -109,8 +108,8 @@ var mainList = {
 
 console.log(mainList);
 mainList.chooseShopItems();
-(mainList.shopItems).forEach(function(item,i,shopItems){if (mainList.shopItems[i] != 0)
-{document.write ("У нас вы можете купить: " + i + " " + item + "<br>")}
+(mainList.shopItems).forEach(function(item,i,shopItems){
+	document.write ("У нас вы можете купить: " + (i+1) + " " + item + "<br>")
 	
 })
 
