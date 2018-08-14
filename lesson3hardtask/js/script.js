@@ -40,7 +40,7 @@ function dataCheck() {
 			
 		} else if (typeof (dataUser) === 'string' && typeof(dataUser) != null && dataUser != "" && (dataUser.trim()).length > 50) {
 			
-			dataUser = dataUser.substr(0,50);
+			dataUser = dataUser.substr(1,50);
 			console.log(dataUser.trim() + "...");
 
 		} else {
