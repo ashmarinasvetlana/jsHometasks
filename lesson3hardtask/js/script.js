@@ -1,4 +1,4 @@
- str = "урок-3-был слишком легким";
+str = "урок-3-был слишком легким";
 console.log(str[0].toUpperCase() + str.substring(1));
 str = str.replace(/-/g, ' ');
 console.log(str);
@@ -35,11 +35,12 @@ function dataCheck() {
 
 	for (var i = 0; i < 1; i++) {
 		var dataUser = prompt("Введите данные");
-		if (typeof (dataUser) === 'string' && typeof(dataUser) != null && dataUser != "" && dataUser.length < 5) {
+		if (typeof (dataUser) === 'string' && typeof(dataUser) != null && dataUser != "" && dataUser.length < 50) {
 			console.log(dataUser.trim());
 			
-		} else if (typeof (dataUser) === 'string' && typeof(dataUser) != null && dataUser != "" && dataUser.length > 5) {
-			dataUser = dataUser.substr(0,3);
+		} else if (typeof (dataUser) === 'string' && typeof(dataUser) != null && dataUser != "" && (dataUser.trim()).length > 50) {
+			
+			dataUser = dataUser.substr(0,50);
 			console.log(dataUser.trim() + "...");
 
 		} else {
