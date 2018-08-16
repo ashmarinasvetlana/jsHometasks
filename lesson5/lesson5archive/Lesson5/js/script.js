@@ -14,7 +14,7 @@ li5.textContent = 'Пятый пункт';
 menu.appendChild(li5);
 menu.insertBefore(item[1], item[3]);
 
-body.style.background = 'url(../img/apple_true.jpg) no-repeat center';
+body.style.background = 'url(./img/apple_true.jpg) no-repeat center';
 
 adv.parentNode.removeChild(adv);
 

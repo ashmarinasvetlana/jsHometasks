@@ -1,19 +1,19 @@
 let btnOpen = document.getElementById('open-btn');
 console.log(btnOpen);
 
-let shopName = document.querySelector('.name-value');
+let shopName = document.getElementsByClassName('name-value')[0];
 console.log(shopName);
-let budget = document.querySelector('.budget-value');
+let budget = document.getElementsByClassName('budget-value')[0];
 console.log(budget);
-let shopGoods = document.querySelector('.goods-value');
+let shopGoods = document.getElementsByClassName('goods-value')[0];
 console.log(shopGoods);
-let shopItems = document.querySelector('.items-value');
+let shopItems = document.getElementsByClassName('items-value')[0];
 console.log(shopItems);
-let employers = document.querySelector('.employers-value');
+let employers = document.getElementsByClassName('employers-value')[0];
 console.log(employers);
-let discount = document.querySelector('.discount-value');
+let discount = document.getElementsByClassName('discount-value')[0];
 console.log(discount);
-let isOpen = document.querySelector('.isopen-value');
+let isOpen = document.getElementsByClassName('isopen-value')[0];
 console.log(isOpen);
 let chooseShopGoods = document.querySelectorAll('.goods-item');
 console.log(chooseShopGoods);
