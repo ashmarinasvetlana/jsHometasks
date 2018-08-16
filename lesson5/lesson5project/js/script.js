@@ -31,7 +31,7 @@ let time = document.querySelector('.time-value');
 console.log(time);
 let dayBudget = document.querySelector('.count-budget-value');
 console.log(dayBudget);
-let hireEmployers = document.querySelectorAll('.hire-employers');
+let hireEmployers = document.querySelectorAll('.hire-employers-item');
 console.log(hireEmployers);
 
 
