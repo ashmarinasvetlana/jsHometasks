@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 670px;
+  background: url(../img/bg.png);
+  word-break: break-all;
+font-family: 'M PLUS Rounded 1c', sans-serif;
+	font-weight: 400
+}
+.open {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+border-radius: 30px;
+  width: 350px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.open-btn {
+  border: none;
+  outline: none;
+  color: black;
+	font-size: 18px;
+	text-transform: uppercase;
+  font-weight: 900;
+  cursor: pointer;
+  background-color: dimgrey;
+  box-shadow: 0px 0px 10px rgba(83, 86, 173, 0.5);
+  border-radius: 10px;
+  width: 250px;
+  height: 70px;
+	transition: 0.3s;
+}
+
+.open-btn:hover {
+	background-color: #ffc32a;
+	transition: 0.3s;
+}
+.main {
+	font-size: 18px;
+  width: 100%;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+.main-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  width: 550px;
+  min-height: 400px;
+  padding: 20px;
+   background-color: rgba(255, 255, 255, 0.5);
+
+}
+.main-info .name,
+.main-info .name-value,
+.main-info .budget,
+.main-info .budget-value,
+.main-info .goods,
+.main-info .goods-value,
+.main-info .items,
+.main-info .items-value,
+.main-info .employers,
+.main-info .employers-value,
+.main-info .discount,
+.main-info .discount-value
+
+{
+  width: 48%;
+  margin-top: 5px;
+  min-height: 40px;
+  padding: 10px;
+
+}
+
+.main-info .discount-value
+{
+  min-height: 64px;
+	margin-top: 35px;
+}
+.main-info .isopen{
+		 width: 48%;
+  margin-top: 35px;
+  min-height: 64px;
+  padding: 10px;
+}
+.isopen-value {
+	 width: 48%;
+  margin-top: 20px;
+  min-height: 64px;
+  padding: 10px;
+	background: url(../img/closed.png) center no-repeat;}
+
+.main-functions {
+  width: 550px;
+  min-height: 500px;
+  padding: 10px;
+   background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+}
+.main-functions .choose-goods,
+.main-functions .choose-items,
+.main-functions .time,
+.main-functions .count-budget,
+.main-functions .hire-employers {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+.main-functions .goods-item {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 49%;
+  height: 25px;
+  border-radius: 5px;
+}
+.main-functions .goods-item-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.main-functions .choose-item,
+.main-functions .time-value,
+.main-functions .count-budget-value {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 70%;
+  height: 25px;
+border-radius: 5px;
+}
+.main-functions .time-value {
+  width: 30%;
+}
+.main-functions .count-budget-value {
+  width: 30%;
+  display: inline-block;
+  margin-left: 25%;
+}
+.main-functions .hire-employers-item {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 49%;
+  height: 25px;
+}
+.main-functions .hire-employers-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.main-info {border-radius: 20px;
+border-color: transparent;
+}
+.name, .budget, .goods, .items, .employers, .discount, .isopen{
+
+}
+.name-value, .budget-value, .goods-value, .items-value, .employers-value {
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 17px;
+}
+
+.discount-value, .isopen-value {
+	border: no;
+	border-radius: 17px;
+}
+.discount span {color: red;
+font-weight: 600;}
+
+.count-budget-btn, .hire-employers-btn, .goods-item-btn {
+	background-color: dimgrey;
+	text-transform: uppercase;
+	font-weight: 600;
+	height: 40px;
+	width: 150px;
+	color: wheat;
+	border-radius: 5px;
+}
+
+.count-budget-btn:hover, .hire-employers-btn:hover, .goods-item-btn:hover {
+	color: black;
+	background-color: yellow;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.count-budget-btn:disabled, .hire-employers-btn:disabled, .goods-item-btn:disabled {
+    background-color: lightgray;
+	color: darkgrey;
+}
+
+input {border-radius: 3px;
+	background-color: lightgoldenrodyellow;
+outline: none;}

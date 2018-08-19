@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<title>Java Script</title>
+  </head>
+  <body>
+
+	<div class="open">
+		<button class="open-btn" id="open-btn">Открыть магазин</button>
+	</div>
+	<div class="main">
+		<div class="main-info">
+			<div class="name">Название магазина: </div>
+			<div class="name-value"></div>
+
+			<div class="budget">Бюджет магазина: </div>
+			<div class="budget-value"></div>
+
+			<div class="goods">Категории товаров: </div>
+			<div class="goods-value"></div>
+
+			<div class="items">Наименования товаров: </div>
+			<div class="items-value"></div>
+
+			<div class="employers">Сотрудники: </div>
+			<div class="employers-value"></div>
+
+			<div class="discount">Дисконтная<br>система<span>(Совершите покупку с 10 до 12 и получите скидку!)</span></div>
+			<div class="discount-value"></div>
+
+			<div class="isopen">Работа магазина</div>
+			<div class="isopen-value"></div>
+		</div>
+		<div class="main-functions">
+			<div class="choose-goods">Введите категории товаров</div>
+			<input class="goods-item" type="text" id="goods_1">
+			<input class="goods-item" type="text" id="goods_2">
+			<input class="goods-item" type="text" id="goods_3">
+			<input class="goods-item" type="text" id="goods_4">
+			<button class="goods-item-btn">Утвердить</button>
+
+			<div class="choose-items">Введите продукты через запятую</div>
+			<input class="choose-item" type="text" id="items">
+
+			<div class="time">Сколько сейчас времени?</div>
+			<input class="time-value" type="text" id="time">
+
+			<div class="count-budget">Расчет дневного бюджета</div>
+			<input class="count-budget-value" type="text" id="budget" disabled>
+			<button class="count-budget-btn">Рассчитать</button>
+
+			<div class="hire-employers">Имена сотрудников</div>
+			<input class="hire-employers-item" type="text" id="employers_1">
+			<input class="hire-employers-item" type="text" id="employers_2">
+			<input class="hire-employers-item" type="text" id="employers_3">
+			<button class="hire-employers-btn">Нанять</button>
+		</div>
+	</div>
+
+
+	<script  src="js/script.js"></script>
+  </body>
+</html>
