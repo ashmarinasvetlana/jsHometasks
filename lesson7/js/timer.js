@@ -17,4 +17,4 @@ function currentTime() {
 
 
 }
-setInterval(currentTime, 1);
+setInterval(currentTime, 1000);
