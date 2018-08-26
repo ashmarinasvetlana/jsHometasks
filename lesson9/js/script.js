@@ -116,7 +116,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		more.classList.remove('more-splash');
 		document.body.style.overflow = '';
 	});
-	
+	/*
 	let descriptionBtn = document.querySelectorAll('.description-btn');
 
     for(i=0; i < descriptionBtn.length; i++) {
@@ -130,3 +130,4 @@ window.addEventListener('DOMContentLoaded', function () {
 	}
 	
 });
+*/
