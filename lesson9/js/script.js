@@ -117,7 +117,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.body.style.overflow = '';
 	});
 	/*
-	let descriptionBtn = document.querySelectorAll('.description-btn');
+	
 
     for(i=0; i < descriptionBtn.length; i++) {
 	
@@ -128,6 +128,14 @@ window.addEventListener('DOMContentLoaded', function () {
 	});
 	
 	}
+	*/
 	
+	moreTab = document.querySelector('.info');
+	moreTab.addEventListener('click', () => {
+							 let target = event.target;
+		 if (target.className == 'description-btn') {
+overlay.style.display = "block";
+		document.body.style.overflow = 'hidden';
+                        }
+							 });
 });
-*/
