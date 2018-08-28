@@ -131,7 +131,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	*/
 	
 	moreTab = document.querySelector('.info');
-	moreTab.addEventListener('click', () => {
+	moreTab.addEventListener('click', () =>  {
 							 let target = event.target;
 		 if (target.className == 'description-btn') {
 overlay.style.display = "block";

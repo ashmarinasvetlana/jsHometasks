@@ -103,6 +103,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	setClock('timer', deadline);
 	
 	//modal
+	//modal
 	let more = document.querySelector('.more'),
 		overlay = document.querySelector('.overlay'),
 		close = document.querySelector('.popup-close');
@@ -111,21 +112,33 @@ window.addEventListener('DOMContentLoaded', () => {
 		overlay.style.display = "block";
 		document.body.style.overflow = 'hidden';
 	});
-	close.addEventListener('click', () => {
+	close.addEventListener('click', function(){
 		overlay.style.display = "none";
 		more.classList.remove('more-splash');
 		document.body.style.overflow = '';
 	});
+	/*
 	
-	let descriptionBtn = document.querySelectorAll('.description-btn');
 
     for(i=0; i < descriptionBtn.length; i++) {
 	
-	descriptionBtn[i].addEventListener('click', () =>{
+	descriptionBtn[i].addEventListener('click', function(){
 	
 		overlay.style.display = "block";
 		document.body.style.overflow = 'hidden';
 	});
+	
+	}
+	*/
+	
+	moreTab = document.querySelector('.info');
+	moreTab.addEventListener('click', () =>  {
+							 let target = event.target;
+		 if (target.className == 'description-btn') {
+overlay.style.display = "block";
+		document.body.style.overflow = 'hidden';
+                        }
+							 });
 	
 	}
 
@@ -213,4 +226,59 @@ window.addEventListener('DOMContentLoaded', () => {
 			//очищаем поля ввода
 		}
 	});
+
+//slider
+
+//Переменные
+let slideIndex = 1,
+    slides = document.getElementsByClassName('slider-item'),
+    prev = document.querySelector('.prev'),
+    next = document.querySelector('.next'),
+    dotsWrap = document.querySelector('.slider-dots'),
+    dots = document.getElementsByClassName('dot');
+showSlides(slideIndex);
+//функция показа слайда с точками и стрелками
+function showSlides(index){
+  if (index > slides.length){
+    slideIndex = 1;
+  };
+  if (index < 1){
+    slideIndex = slides.length;
+  };
+  for (let i = 0; i < slides.length; i++){
+    slides[i].style.display = 'none';
+  };
+  for (let i = 0; i < dots.length; i++){
+     dots[i].classList.remove('dot-active');
+  }
+  slides[slideIndex - 1].style.display = 'block';
+  dots[slideIndex - 1].classList.add('dot-active');
+};
+
+function plusSlides(index) {
+  showSlides(slideIndex += index);
+};
+
+function currentSlide(index){
+  showSlides(slideIndex = index);
+};
+
+//слайд назад
+prev.addEventListener('click', function(){
+  plusSlides(-1);
+});
+//слайд вперед
+next.addEventListener('click', function(){
+  plusSlides(1);
+})
+
+//Нахождение точек
+dotsWrap.addEventListener('click', function(event){
+  for (let i = 0; i < dots.length + 1; i++) {
+    if (event.target.classList.contains('dot') && event.target == dots[i-1]) {
+      currentSlide(i);
+    }
+  }
+})
+
 });
