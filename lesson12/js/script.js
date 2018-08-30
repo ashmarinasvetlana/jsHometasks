@@ -271,6 +271,7 @@ overlay.style.display = "block";
 	next.addEventListener('click', function () {
 		plusSlides(1);
 		clearInterval(slideInterval);
+	
 	});
 
 	//Нахождение точек
@@ -296,37 +297,62 @@ overlay.style.display = "block";
 		daysSum = 0,
 		total = 0;
 	totalValue.innerHTML = 0;
+//Анимация итоговой суммы 
+	
+function animateTotalValue (sum){
+let i = 0;
+	
+(function(){
+if( i <= total){
+setTimeout(arguments.callee,5);
+totalValue.innerHTML = i;
+i = i + 500;
+}else{
+totalValue.innerHTML = sum;
+}
+})();
+}
 
-	persons.addEventListener('change', function () {
+	persons.addEventListener('input', function () {
 		personsSum = +this.value;
 		total = (daysSum + personsSum) * 4000;
 		if (restDays.value == '' || persons.value == ''|| restDays.value == '0' || persons.value == '0') {
 			totalValue.innerHTML = 0;
 		} else {
 			totalValue.innerHTML = total;
+			animateTotalValue(total);
 		}
 	})
 
-	restDays.addEventListener('change', function () {
+	restDays.addEventListener('input', function () {
 		daysSum = +this.value;
 		total = (daysSum + personsSum) * 4000;
 		if (restDays.value == '' || persons.value == ''|| restDays.value == '0' || persons.value == '0' ) {
 			totalValue.innerHTML = 0;
 		} else {
 			totalValue.innerHTML = total;
+			animateTotalValue(total);
 		}
 	});
 
+
+	
 place.addEventListener('change', function(){
 	if (restDays.value == '' || persons.value == ''|| restDays.value == '0' || persons.value == '0') {
 		totalValue.innerHTML = 0;
 		
 	} else {
-		let a = total;
-		totalValue.innerHTML = a * this.options[this.selectedIndex].value;
+		let a = total,
+		b = a * this.options[this.selectedIndex].value;
+		totalValue.innerHTML = b;
+		animateTotalValue(b);
+	
 	}
 }); 
 	
+
+		
+//Ограничение на ввод символов
 	
 document.getElementsByTagName('input')[0].onkeypress = function(e) {
 

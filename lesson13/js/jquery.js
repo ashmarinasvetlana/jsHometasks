@@ -6,7 +6,7 @@ $(document).ready(function () {
 		$('.overlay').show();
 		$('.modal').show();
 		$('.overlay').animate({opacity:'1.5'}, 2000);
-		$('.modal').animate({'margin-top': '10rem'}, 2000);
+		$('.modal').animate({'margin-top': '10rem'}, 1000);
 		
 	});
 	
@@ -14,6 +14,6 @@ $(document).ready(function () {
 	$('.close').on('click', function(){
 		
 		$('.overlay').animate({'opacity':'0', 'z-index': '0'}, 2000);
-		$('.modal').animate({'margin-top': '-50rem'}, 2000);
+		$('.modal').animate({'margin-top': '-50rem'}, 1000);
 	});
 });
