@@ -315,7 +315,7 @@ overlay.style.display = "block";
 		} else {
 			totalValue.innerHTML = total;
 		}
-	})
+	});
 
 place.addEventListener('change', function(){
 	if (restDays.value == '' || persons.value == ''|| restDays.value == '0' || persons.value == '0') {
@@ -326,6 +326,8 @@ place.addEventListener('change', function(){
 		totalValue.innerHTML = a * this.options[this.selectedIndex].value;
 	}
 }); 
+	
+	
 document.getElementsByTagName('input')[0].onkeypress = function(e) {
 
       e = e || event;
