@@ -1,3 +1,4 @@
+window.addEventListener('DOMContentLoaded', () => {
 
 import tab from '../parts/tab.js';
 import modal from '../parts/modal.js';
@@ -12,3 +13,4 @@ ajax();
 slider();
 calc();
 timer();
+});

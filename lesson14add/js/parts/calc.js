@@ -15,7 +15,7 @@ function calc() {
       total = 0;
   totalValue.innerHTML = 0; //Анимация итоговой суммы 
 
-  /*	
+  	
   function animateTotalValue (sum){
   let i = 0;
   	
@@ -29,7 +29,7 @@ function calc() {
   }
   })();
   }
-  */
+  
 
   persons.addEventListener('input', function () {
     personsSum = +this.value;
@@ -38,7 +38,7 @@ function calc() {
     if (restDays.value == '' || persons.value == '' || restDays.value == '0' || persons.value == '0') {
       totalValue.innerHTML = 0;
     } else {
-      totalValue.innerHTML = total; //animateTotalValue(total);
+      totalValue.innerHTML = total; animateTotalValue(total);
     }
   });
   restDays.addEventListener('input', function () {
@@ -48,7 +48,7 @@ function calc() {
     if (restDays.value == '' || persons.value == '' || restDays.value == '0' || persons.value == '0') {
       totalValue.innerHTML = 0;
     } else {
-      totalValue.innerHTML = total; //animateTotalValue(total);
+      totalValue.innerHTML = total; animateTotalValue(total);
     }
   });
   place.addEventListener('change', function () {
@@ -57,7 +57,7 @@ function calc() {
     } else {
       var a = total,
           b = a * this.options[this.selectedIndex].value;
-      totalValue.innerHTML = b; //animateTotalValue(b);
+      totalValue.innerHTML = b; animateTotalValue(b);
     }
   }); //Ограничение на ввод символов
 

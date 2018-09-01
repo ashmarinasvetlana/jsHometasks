@@ -9,7 +9,7 @@ function calc() {
       daysSum = 0,
       total = 0;
   totalValue.innerHTML = 0; //Анимация итоговой суммы 
-/*
+
   function animateTotalValue(sum) {
     var i = 0;
 
@@ -23,7 +23,7 @@ function calc() {
       }
     })();
   }
-*/
+
   persons.addEventListener('input', function () {
     personsSum = +this.value;
     total = (daysSum + personsSum) * 4000;
@@ -32,7 +32,7 @@ function calc() {
       totalValue.innerHTML = 0;
     } else {
       totalValue.innerHTML = total;
-     // animateTotalValue(total);
+      animateTotalValue(total);
     }
   });
   restDays.addEventListener('input', function () {
@@ -43,7 +43,7 @@ function calc() {
       totalValue.innerHTML = 0;
     } else {
       totalValue.innerHTML = total;
-     // animateTotalValue(total);
+      animateTotalValue(total);
     }
   });
   place.addEventListener('change', function () {
@@ -53,7 +53,7 @@ function calc() {
       var a = total,
           b = a * this.options[this.selectedIndex].value;
       totalValue.innerHTML = b;
-      //animateTotalValue(b);
+      animateTotalValue(b);
     }
   }); //Ограничение на ввод символов
 
