@@ -29,7 +29,8 @@ function sum(a, b) {
 
 describe("sum", function(){
 	it("Проверяем результат на тип данных", function(){
-		assert.equal(sum(2,2), true);
+		assert.isFalse(sum(2,2), 'Верно или нет?');
+
 	});
 });
 
