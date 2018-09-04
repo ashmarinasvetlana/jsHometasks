@@ -13,7 +13,7 @@ class Button extends React.Component {
 	}
 	render(){
 		return(
-		<button onClick={this.myClick} сlassName="clicker">Изменить дизайн</button>
+		<button onClick={this.myClick} className="clicker">Изменить дизайн</button>
 		)
 	}
 }
