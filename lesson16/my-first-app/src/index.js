@@ -8,7 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 class App extends React.Component {
 	render(){
 		return (
-		<div className = "wrapper">
+		<div className="wrapper">
 			<Clock/>
 			<Button/>
 			</div>
