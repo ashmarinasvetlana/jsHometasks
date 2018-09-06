@@ -4,6 +4,7 @@ let targetParent = document.querySelector('body'),
 	giftModal = document.querySelector('.popup-gift'),
 	close = document.querySelector('.popup-close'),
 	gift = document.querySelector('.fixed-gift');
+	
 
 
 targetParent.addEventListener('click', () => {
@@ -26,7 +27,7 @@ targetParent.addEventListener('click', () => {
 		document.body.style.overflow = 'hidden';
 
 	}
-	if (target.className == 'popup-close') {
+	if (target.className == 'popup-close' || target.className == 'popup-content') {
 		document.body.style.overflow = '',
 		designModal.style.display = "none",
 		consultationModal.style.display = "none",
